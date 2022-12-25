@@ -8,6 +8,7 @@ import {
 } from 'react-icons/ai';
 
 import { IPost } from "interfaces";
+import { REFINE_API } from "config";
 
 export const PostList: React.FC = () => {
     const columns = React.useMemo<ColumnDef<IPost>[]>(
@@ -53,6 +54,13 @@ export const PostList: React.FC = () => {
 
     return (
         <div className="container mx-auto pb-4">
+            <h1 className="py-4">
+                Post list from refine fake api
+                {' '}
+                <a href={REFINE_API} className="text-blue-500">
+                    {REFINE_API}
+                </a>
+            </h1>
             <table className="min-w-full table-fixed divide-y divide-gray-200 border">
                 <thead className="bg-gray-100">
                     {getHeaderGroups().map((headerGroup) => (

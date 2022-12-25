@@ -8,6 +8,7 @@ import {
 } from 'react-icons/ai';
 
 import { IPost } from "interfaces";
+import { JSON_API } from "config";
 
 export const JsonPostList: React.FC = () => {
     const columns = React.useMemo<ColumnDef<IPost>[]>(
@@ -52,6 +53,13 @@ export const JsonPostList: React.FC = () => {
 
     return (
         <div className="container mx-auto pb-4">
+            <h1 className="py-4">
+                Post list from refine fake api
+                {' '}
+                <a href={JSON_API} className="text-blue-500">
+                    {JSON_API}
+                </a>
+            </h1>
             <table className="min-w-full table-fixed divide-y divide-gray-200 border">
                 <thead className="bg-gray-100">
                     {getHeaderGroups().map((headerGroup) => (

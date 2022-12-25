@@ -9,13 +9,15 @@ import 'index.css';
 import { PostList } from "pages/refine/posts";
 import { Layout } from "components/Layout";
 import { JsonPostList } from "pages/json/posts";
+import { JSON_API, REFINE_API } from "config";
+
 
 function App() {
   return (
     <Refine
       dataProvider={{
-        default: dataProvider("https://api.fake-rest.refine.dev"),
-        jsonPlaceholder: dataProvider("https://jsonplaceholder.typicode.com")
+        default: dataProvider(REFINE_API),
+        jsonPlaceholder: dataProvider(JSON_API)
       }}
       routerProvider={routerProvider}
       Layout={Layout}
