@@ -54,7 +54,7 @@ export const JsonPostList: React.FC = () => {
     return (
         <div className="container mx-auto pb-4">
             <h1 className="py-4">
-                Post list from refine fake api
+                Post list from json placeholder
                 {' '}
                 <a href={JSON_API} className="text-blue-500">
                     {JSON_API}
